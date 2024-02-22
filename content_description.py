@@ -5,11 +5,13 @@ import numpy as np
 
 model = InstructBlipForConditionalGeneration.from_pretrained(
     "Salesforce/instructblip-vicuna-7b",
-    load_in_4b = True,
+    load_in_4bit = True,
     torch_dtype = torch.bfloat16,
 )
 
 processor = InstructBlipProcessor.from_pretrained(
+    "Salesforce/instructblip-vicuna-7b",
+    load_in_4bit = True,
 )
 
 datasets = [
