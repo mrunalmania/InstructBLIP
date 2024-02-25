@@ -11,7 +11,7 @@ with open("description.csv", 'r') as f:
 lines = [line.strip().split(",") for line in lines]
 
 for idx, line in enumerate(lines):
-    lines[idx] = [lines[0], ",".join(line[1:])]
+    lines[idx] = [line[0], ",".join(line[1:])]
 
 df = pd.DataFrame(lines, columns=['id', 'desc'])
 
